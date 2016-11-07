@@ -1,11 +1,9 @@
 package uk.co.tpplc.gcm;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
-import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -30,7 +28,7 @@ public class Pickslip extends AppCompatActivity {
         try {
             JSONObject dets = new JSONObject(pick);
             //           ListView lv = new ListView(this);
-            TableLayout ll = (TableLayout)findViewById(R.id.pickTable);
+            TableLayout ll = (TableLayout) findViewById(R.id.pickTable);
             for (int i = 0; i < dets.getJSONArray(getString(R.string.LinesElement)).length(); i++) {
                 JSONObject line = dets.getJSONArray(getString(R.string.LinesElement)).getJSONObject(i);
                 TableRow tableRow = new TableRow(this);
