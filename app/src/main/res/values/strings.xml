@@ -8,4 +8,7 @@
 
     <string name="msg_subscribed">Subscribed to news topic</string>
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="heading1">Prod Code</string>
+    <string name="heading2">Description</string>
+    <string name="heading3">Location</string>
 </resources>
