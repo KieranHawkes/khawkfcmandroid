@@ -4,6 +4,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -20,35 +21,16 @@ public class Pickslip extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        setContentView(R.layout.pickslip);
         Log.d(TAG, "INSIDE PICKSLIP ");
         super.onCreate(savedInstanceState);
         Bundle extras = getIntent().getExtras();
-
         String pick = extras.getString(getString(R.string.pickDetailElement));
 
         try {
             JSONObject dets = new JSONObject(pick);
-            TableLayout ll = new TableLayout(this);
-            ll.setOrientation(LinearLayout.HORIZONTAL);
-            TableRow.LayoutParams tableRowParams = new TableRow.LayoutParams();
-            tableRowParams.setMargins(8, 2, 8, 2);
-            TableRow headings = new TableRow(this);
-            TextView hdr1 = new TextView(this);
-            TextView hdr2 = new TextView(this);
-            TextView hdr3 = new TextView(this);
-            hdr1.setText(R.string.heading1);
-            hdr2.setText(R.string.heading2);
-            hdr3.setText(R.string.heading3);
-            hdr1.setTypeface(null, Typeface.BOLD);
-            hdr2.setTypeface(null, Typeface.BOLD);
-            hdr3.setTypeface(null, Typeface.BOLD);
-            headings.addView(hdr1, tableRowParams);
-            headings.addView(hdr2, tableRowParams);
-            headings.addView(hdr3, tableRowParams);
-            ll.addView(headings, tableRowParams);
-
             //           ListView lv = new ListView(this);
+            TableLayout ll = (TableLayout)findViewById(R.id.pickTable);
             for (int i = 0; i < dets.getJSONArray(getString(R.string.LinesElement)).length(); i++) {
                 JSONObject line = dets.getJSONArray(getString(R.string.LinesElement)).getJSONObject(i);
                 TableRow tableRow = new TableRow(this);
@@ -58,10 +40,11 @@ public class Pickslip extends AppCompatActivity {
                 description.setText(line.get(getString(R.string.descriptonElement)).toString());
                 TextView location = new TextView(this);
                 location.setText(line.get(getString(R.string.locationElement)).toString());
-                tableRow.addView(prodCode, tableRowParams);
-                tableRow.addView(description, tableRowParams);
-                tableRow.addView(location, tableRowParams);
-                ll.addView(tableRow, tableRowParams);
+                location.setGravity(Gravity.RIGHT);
+                tableRow.addView(prodCode);
+                tableRow.addView(description);
+                tableRow.addView(location);
+                ll.addView(tableRow);
 
           /*      StringBuilder text = new StringBuilder();
                 text.append(line.get("LineNo"));

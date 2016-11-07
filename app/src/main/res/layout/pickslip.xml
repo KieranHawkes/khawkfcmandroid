@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/pickTable">
+    <TableRow
+        android:id="@+id/headings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dip">
+
+        <TextView
+            android:id="@+id/heading1"
+            android:text="@string/heading1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:paddingRight="5dip"/>
+
+        <TextView
+            android:id="@+id/heading2"
+            android:text="@string/heading2"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:paddingRight="5dip"/>
+
+        <TextView
+            android:id="@+id/heading3"
+            android:text="@string/heading3"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:paddingRight="5dip"/>
+    </TableRow>
+</TableLayout>
