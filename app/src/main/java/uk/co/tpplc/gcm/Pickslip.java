@@ -12,7 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by khawk on 14/03/2016.
+ * Activity to display details of pickslips
  */
 public class Pickslip extends AppCompatActivity {
     private static final String TAG = "PICKSLIP";
@@ -38,7 +38,7 @@ public class Pickslip extends AppCompatActivity {
                 description.setText(line.get(getString(R.string.descriptonElement)).toString());
                 TextView location = new TextView(this);
                 location.setText(line.get(getString(R.string.locationElement)).toString());
-                location.setGravity(Gravity.RIGHT);
+                location.setGravity(Gravity.END);
                 tableRow.addView(prodCode);
                 tableRow.addView(description);
                 tableRow.addView(location);
