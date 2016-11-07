@@ -3,7 +3,6 @@ package uk.co.tpplc.gcm;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -31,7 +30,7 @@ public class Pickslip extends AppCompatActivity {
             TableLayout ll = (TableLayout) findViewById(R.id.pickTable);
             for (int i = 0; i < dets.getJSONArray(getString(R.string.LinesElement)).length(); i++) {
                 JSONObject line = dets.getJSONArray(getString(R.string.LinesElement)).getJSONObject(i);
-                final View row = View.inflate(this,R.layout.pickrow,null);
+                final View row = View.inflate(this, R.layout.pickrow, null);
                 final TextView prodCode = (TextView) row.findViewById(R.id.prod_code_col);
                 prodCode.setText(line.get(getString(R.string.productCodeElement)).toString());
                 final TextView description = (TextView) row.findViewById(R.id.description_col);
@@ -64,7 +63,7 @@ public class Pickslip extends AppCompatActivity {
 
             setContentView(ll);
         } catch (JSONException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
     }
