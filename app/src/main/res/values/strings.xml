@@ -11,4 +11,9 @@
     <string name="heading1">Prod Code</string>
     <string name="heading2">Description</string>
     <string name="heading3">Location</string>
+    <string name="pickDetailElement">PickDets</string>
+    <string name="LinesElement">Lines</string>
+    <string name="productCodeElement">prodCode</string>
+    <string name="descriptonElement">Description</string>
+    <string name="locationElement">Location</string>
 </resources>
