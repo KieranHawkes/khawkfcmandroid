@@ -3,9 +3,9 @@ package uk.co.tpplc.gcm;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -31,18 +31,14 @@ public class Pickslip extends AppCompatActivity {
             TableLayout ll = (TableLayout) findViewById(R.id.pickTable);
             for (int i = 0; i < dets.getJSONArray(getString(R.string.LinesElement)).length(); i++) {
                 JSONObject line = dets.getJSONArray(getString(R.string.LinesElement)).getJSONObject(i);
-                TableRow tableRow = new TableRow(this);
-                TextView prodCode = new TextView(this);
+                final View row = View.inflate(this,R.layout.pickrow,null);
+                final TextView prodCode = (TextView) row.findViewById(R.id.prod_code_col);
                 prodCode.setText(line.get(getString(R.string.productCodeElement)).toString());
-                TextView description = new TextView(this);
+                final TextView description = (TextView) row.findViewById(R.id.description_col);
                 description.setText(line.get(getString(R.string.descriptonElement)).toString());
-                TextView location = new TextView(this);
+                final TextView location = (TextView) row.findViewById(R.id.location_col);
                 location.setText(line.get(getString(R.string.locationElement)).toString());
-                location.setGravity(Gravity.END);
-                tableRow.addView(prodCode);
-                tableRow.addView(description);
-                tableRow.addView(location);
-                ll.addView(tableRow);
+                ll.addView(row);
 
           /*      StringBuilder text = new StringBuilder();
                 text.append(line.get("LineNo"));

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/prod_code_col"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:paddingEnd="5dip"
+        android:paddingRight="5dip"
+        android:paddingLeft="1dip"/>
+
+    <TextView
+        android:id="@+id/description_col"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:paddingEnd="5dip"
+        android:paddingRight="5dip"
+        android:paddingLeft="1dip"/>
+
+    <TextView
+        android:id="@+id/location_col"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:gravity="end"
+        android:paddingEnd="5dip"
+        android:paddingRight="5dip"
+        android:paddingLeft="1dip"/>
+</TableRow>
