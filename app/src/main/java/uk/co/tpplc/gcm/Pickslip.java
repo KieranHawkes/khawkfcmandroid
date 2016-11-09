@@ -37,6 +37,8 @@ public class Pickslip extends AppCompatActivity {
                 description.setText(line.get(getString(R.string.descriptonElement)).toString());
                 final TextView location = (TextView) row.findViewById(R.id.location_col);
                 location.setText(line.get(getString(R.string.locationElement)).toString());
+                final TextView qty = (TextView) row.findViewById(R.id.qty_col);
+                qty.setText(line.get(getString(R.string.qtyElement)).toString());
                 ll.addView(row);
 
           /*      StringBuilder text = new StringBuilder();

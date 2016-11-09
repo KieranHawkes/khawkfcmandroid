@@ -22,6 +22,15 @@
         android:paddingLeft="1dip"/>
 
     <TextView
+        android:id="@+id/qty_col"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:paddingEnd="5dip"
+        android:paddingRight="5dip"
+        android:paddingLeft="1dip"/>
+
+    <TextView
         android:id="@+id/location_col"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

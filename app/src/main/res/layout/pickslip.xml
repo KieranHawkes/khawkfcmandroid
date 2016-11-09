@@ -11,21 +11,28 @@
 
         <TextView
             android:id="@+id/heading1"
-            android:text="@string/heading1"
+            android:text="@string/prod_heading"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold"
             android:paddingRight="5dip"/>
 
         <TextView
             android:id="@+id/heading2"
-            android:text="@string/heading2"
+            android:text="@string/desc_heading"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold"
             android:paddingRight="5dip"/>
 
         <TextView
             android:id="@+id/heading3"
-            android:text="@string/heading3"
+            android:text="@string/qty_heading"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:paddingRight="5dip"/>
+
+        <TextView
+            android:id="@+id/heading4"
+            android:text="@string/loc_heading"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold"
             android:paddingRight="5dip"/>

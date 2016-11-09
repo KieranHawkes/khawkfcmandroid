@@ -8,12 +8,14 @@
 
     <string name="msg_subscribed">Subscribed to news topic</string>
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
-    <string name="heading1">Prod Code</string>
-    <string name="heading2">Description</string>
-    <string name="heading3">Location</string>
+    <string name="prod_heading">Prod Code</string>
+    <string name="desc_heading">Description</string>
+    <string name="qty_heading">Qty</string>
+    <string name="loc_heading">Location</string>
     <string name="pickDetailElement">PickDets</string>
     <string name="LinesElement">Lines</string>
     <string name="productCodeElement">prodCode</string>
     <string name="descriptonElement">Description</string>
     <string name="locationElement">Location</string>
+    <string name="qtyElement">Qty</string>
 </resources>
